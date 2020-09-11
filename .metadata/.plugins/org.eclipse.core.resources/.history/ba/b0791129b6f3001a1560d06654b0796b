@@ -1,0 +1,13 @@
+package desafio.runners;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
+
+@CucumberOptions(features = {"src/test/resources/features/produtos_shoestock.feature"}, 
+					glue = {"desafio.steps", "desafio.setup"},
+					tags = {"@Busca", "@Carrinho"},
+					snippets = SnippetType.UNDERSCORE)
+public class RunnerTest {
+	
+}

@@ -1,0 +1,11 @@
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import java.io.IOException;
+import io.cucumber.testng.CucumberOptions;
+
+@CucumberOptions(
+				features = "src/test/resources/features/"
+				glue = {"desafio.steps", "desafio.setup"})
+
+public class RunTest extends AbstractTestNGCucumberTests {
+
+}

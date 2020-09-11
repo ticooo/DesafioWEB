@@ -1,0 +1,9 @@
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+
+@CucumberOptions(
+				features = "src/test/resources/features"
+				glue = {"desafio.steps", "desafio.setup"})
+
+public class RunTest extends AbstractTestNGCucumberTests {
+
+}

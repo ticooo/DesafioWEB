@@ -1,0 +1,15 @@
+package desafio.runners;
+
+import org.junit.runner.RunWith;
+import io.cucumber.core.options.CucumberOptionsAnnotationParser.CucumberOptions;
+
+@RunWith(CucumberOptions.class)
+@CucumberOptions(
+		features = {"src/test/resources/features/"}, 
+		glue = {"desafio.steps", "desafio.setup"},
+		tags = {"@Busca", "@Carrinho"}
+		)
+
+public class RunnerTest {
+
+}

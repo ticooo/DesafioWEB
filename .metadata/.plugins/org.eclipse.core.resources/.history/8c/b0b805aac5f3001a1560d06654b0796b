@@ -1,0 +1,23 @@
+# language: pt
+
+Funcionalidade: Produtos
+
+	Contexto:
+		Dado que eu esteja na home
+
+	@Busca
+	Cenário: Realizar busca de Sapato Casual
+		Quando procuro por "Sapato Casual Masculino"
+		Então valido os resultados
+		
+	@Carrinho
+	Cenário: Incluir produto no carrinho
+		Quando procuro por "Sapato Casual Masculino"
+		Então incluo o produto "Sapato Casual Couro Shoestock Camurça Liso Masculino" no carrinho
+		
+#	@Carrinho
+#	Cenário: Validar produtos incluidos no carrinho na tela de pagamento
+#		Quando acessar o carrinho de compras
+#		Então valido produto no carrinho
+		
+		

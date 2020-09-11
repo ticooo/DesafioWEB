@@ -1,0 +1,36 @@
+package desafio.steps;
+
+import org.junit.Assert;
+
+import cucumber.api.java.pt.Dado;
+import cucumber.api.java.pt.Entao;
+import cucumber.api.java.pt.Quando;
+import desafio.pages.HomePage; 
+import desafio.setup.Hooks;
+
+public class HomeSteps {
+	
+	HomePage homePage = new HomePage(Hooks.get_driver());
+
+	@Dado("que eu esteja na home")
+	public void que_eu_esteja_na_home() {
+		homePage.fechar_anuncio();
+		Assert.assertTrue("Nao foi possivel validar a pagina", homePage.validar_pagina());
+	}
+	
+	@Quando("procuro por {string}") 
+	public void procuro_por_texto(String procura) {
+
+		homePage.procurar_texto(procura);
+		homePage.clicar_buscar();
+	}
+	
+	@Entao("valido os resultados")
+	public void validar_resultados() {
+		//TO-DO
+		
+	}
+	
+	
+
+}

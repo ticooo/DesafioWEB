@@ -1,0 +1,14 @@
+package runners.test;
+
+import org.testng.annotations.Test;
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+
+@CucumberOptions(
+        features = "src//test//java//resources//features",
+        glue= {"desafio.steps","desafio.setup"} )
+@Test
+public class FeatureTest extends AbstractTestNGCucumberTests {
+
+}
+
